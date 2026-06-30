@@ -1,7 +1,7 @@
 
 <div align="center">
 
-![Weather Forecast Pipeline](./weather_banner.svg)
+![Weather Forecast Pipeline](.github/assets/weather_banner.svg)
 
 <br/>
 
