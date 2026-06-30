@@ -1,0 +1,130 @@
+{"timestamp":"2026-06-28T14:16:50.172093Z","level":"info","event":"::group::Pre Execute","logger":"task","filename":"task_runner.py","lineno":1926}
+{"timestamp":"2026-06-28T14:16:50.210008Z","level":"info","event":"DAG bundles loaded: dags-folder","task_id":"PRELOAD01","dag_id":"dag01","run_id":"manual__2026-06-28T14:12:20.580159+00:00","ti_id":"019f0e97-11f1-7257-8bbd-3186ae18cc4a","try_number":4,"map_index":-1,"logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-06-28T14:16:50.211792Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/dag01.py","task_id":"PRELOAD01","dag_id":"dag01","run_id":"manual__2026-06-28T14:12:20.580159+00:00","ti_id":"019f0e97-11f1-7257-8bbd-3186ae18cc4a","try_number":4,"map_index":-1,"logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-06-28T14:16:50.722848Z","level":"info","event":"::endgroup::","task_id":"PRELOAD01","dag_id":"dag01","run_id":"manual__2026-06-28T14:12:20.580159+00:00","ti_id":"019f0e97-11f1-7257-8bbd-3186ae18cc4a","try_number":4,"map_index":-1,"logger":"task","filename":"task_runner.py","lineno":1727}
+{"timestamp":"2026-06-28T14:16:50.770771Z","level":"info","event":"Database connection established successfully.","logger":"src.database.connection","task_id":"PRELOAD01","dag_id":"dag01","run_id":"manual__2026-06-28T14:12:20.580159+00:00","ti_id":"019f0e97-11f1-7257-8bbd-3186ae18cc4a","try_number":4,"map_index":-1,"filename":"connection.py","lineno":35}
+{"timestamp":"2026-06-28T14:16:50.774080Z","level":"info","event":"Comparing 168 new rows against DB for (lat=52.52000, lon=13.42000) from 2026-06-28 00:00:00+00:00 to 2026-07-04 23:00:00+00:00","logger":"src.etl.compare","task_id":"PRELOAD01","dag_id":"dag01","run_id":"manual__2026-06-28T14:12:20.580159+00:00","ti_id":"019f0e97-11f1-7257-8bbd-3186ae18cc4a","try_number":4,"map_index":-1,"filename":"compare.py","lineno":200}
+{"timestamp":"2026-06-28T14:16:50.781913Z","level":"warning","event":"weather_forecasts table not found — creating it now from schema.sql.","logger":"src.etl.compare","task_id":"PRELOAD01","dag_id":"dag01","run_id":"manual__2026-06-28T14:12:20.580159+00:00","ti_id":"019f0e97-11f1-7257-8bbd-3186ae18cc4a","try_number":4,"map_index":-1,"filename":"compare.py","lineno":111}
+{"timestamp":"2026-06-28T14:16:51.170945Z","level":"info","event":"weather_data table created from schema.sql.","logger":"src.etl.compare","task_id":"PRELOAD01","dag_id":"dag01","run_id":"manual__2026-06-28T14:12:20.580159+00:00","ti_id":"019f0e97-11f1-7257-8bbd-3186ae18cc4a","try_number":4,"map_index":-1,"filename":"compare.py","lineno":99}
+{"timestamp":"2026-06-28T14:16:51.171673Z","level":"info","event":"No existing rows in DB for this window — all 168 rows are new.","logger":"src.etl.compare","task_id":"PRELOAD01","dag_id":"dag01","run_id":"manual__2026-06-28T14:12:20.580159+00:00","ti_id":"019f0e97-11f1-7257-8bbd-3186ae18cc4a","try_number":4,"map_index":-1,"filename":"compare.py","lineno":214}
+{"timestamp":"2026-06-28T14:16:51.172313Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.172575Z","level":"info","event":"============================================================","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.172857Z","level":"info","event":"  WEATHER DATA — COMPARE REPORT","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.173180Z","level":"info","event":"============================================================","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.173491Z","level":"info","event":"  New batch rows   :    168","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.173767Z","level":"info","event":"  DB rows (window) :      0","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.174097Z","level":"info","event":"============================================================","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.174384Z","level":"info","event":"  🟢 New (to insert)  :    168","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.174773Z","level":"info","event":"  ✅ Existing (match) :      0","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.175282Z","level":"info","event":"  🟡 Changed (drift)  :      0","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.175722Z","level":"info","event":"  🔴 Stale (DB only)  :      0","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.176010Z","level":"info","event":"============================================================","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.176268Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.176541Z","level":"info","event":"── New rows (first 100) ──","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.185589Z","level":"info","event":" latitude  longitude             forecast_time  temperature_2m  rain  uv_index","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.186055Z","level":"info","event":"    52.52      13.42 2026-06-28 00:00:00+00:00            29.2   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.186357Z","level":"info","event":"    52.52      13.42 2026-06-28 01:00:00+00:00            29.9   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.186618Z","level":"info","event":"    52.52      13.42 2026-06-28 02:00:00+00:00            29.7   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.186900Z","level":"info","event":"    52.52      13.42 2026-06-28 03:00:00+00:00            29.4   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.187195Z","level":"info","event":"    52.52      13.42 2026-06-28 04:00:00+00:00            28.4   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.187453Z","level":"info","event":"    52.52      13.42 2026-06-28 05:00:00+00:00            27.9   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.187767Z","level":"info","event":"    52.52      13.42 2026-06-28 06:00:00+00:00            27.0   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.188071Z","level":"info","event":"    52.52      13.42 2026-06-28 07:00:00+00:00            26.6   0.0      0.20","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.188307Z","level":"info","event":"    52.52      13.42 2026-06-28 08:00:00+00:00            27.1   0.0      0.80","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.188601Z","level":"info","event":"    52.52      13.42 2026-06-28 09:00:00+00:00            28.1   0.0      1.75","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.188862Z","level":"info","event":"    52.52      13.42 2026-06-28 10:00:00+00:00            29.8   0.0      2.75","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.189124Z","level":"info","event":"    52.52      13.42 2026-06-28 11:00:00+00:00            30.8   0.0      3.75","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.189384Z","level":"info","event":"    52.52      13.42 2026-06-28 12:00:00+00:00            32.7   0.0      5.20","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.189636Z","level":"info","event":"    52.52      13.42 2026-06-28 13:00:00+00:00            34.4   0.0      5.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.189900Z","level":"info","event":"    52.52      13.42 2026-06-28 14:00:00+00:00            36.0   0.0      3.90","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.190141Z","level":"info","event":"    52.52      13.42 2026-06-28 15:00:00+00:00            37.2   0.0      6.50","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.190413Z","level":"info","event":"    52.52      13.42 2026-06-28 16:00:00+00:00            38.1   0.0      6.20","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.190740Z","level":"info","event":"    52.52      13.42 2026-06-28 17:00:00+00:00            38.4   0.0      5.75","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.191054Z","level":"info","event":"    52.52      13.42 2026-06-28 18:00:00+00:00            37.9   0.0      4.65","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.191359Z","level":"info","event":"    52.52      13.42 2026-06-28 19:00:00+00:00            37.5   0.0      3.35","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.191592Z","level":"info","event":"    52.52      13.42 2026-06-28 20:00:00+00:00            36.3   0.0      2.10","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.191849Z","level":"info","event":"    52.52      13.42 2026-06-28 21:00:00+00:00            35.1   0.0      1.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.192129Z","level":"info","event":"    52.52      13.42 2026-06-28 22:00:00+00:00            33.3   0.0      0.35","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.192383Z","level":"info","event":"    52.52      13.42 2026-06-28 23:00:00+00:00            30.1   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.192587Z","level":"info","event":"    52.52      13.42 2026-06-29 00:00:00+00:00            28.3   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.192817Z","level":"info","event":"    52.52      13.42 2026-06-29 01:00:00+00:00            26.7   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.193100Z","level":"info","event":"    52.52      13.42 2026-06-29 02:00:00+00:00            25.3   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.193412Z","level":"info","event":"    52.52      13.42 2026-06-29 03:00:00+00:00            24.5   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.193706Z","level":"info","event":"    52.52      13.42 2026-06-29 04:00:00+00:00            24.1   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.193938Z","level":"info","event":"    52.52      13.42 2026-06-29 05:00:00+00:00            24.1   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.194167Z","level":"info","event":"    52.52      13.42 2026-06-29 06:00:00+00:00            24.2   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.194372Z","level":"info","event":"    52.52      13.42 2026-06-29 07:00:00+00:00            24.3   0.0      0.20","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.194608Z","level":"info","event":"    52.52      13.42 2026-06-29 08:00:00+00:00            24.7   0.0      0.80","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.194936Z","level":"info","event":"    52.52      13.42 2026-06-29 09:00:00+00:00            25.5   0.0      1.05","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.195148Z","level":"info","event":"    52.52      13.42 2026-06-29 10:00:00+00:00            26.7   0.0      2.30","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.195398Z","level":"info","event":"    52.52      13.42 2026-06-29 11:00:00+00:00            28.0   0.0      3.70","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.195665Z","level":"info","event":"    52.52      13.42 2026-06-29 12:00:00+00:00            28.8   0.0      3.25","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.195898Z","level":"info","event":"    52.52      13.42 2026-06-29 13:00:00+00:00            29.3   0.0      1.30","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.196271Z","level":"info","event":"    52.52      13.42 2026-06-29 14:00:00+00:00            29.9   0.0      3.75","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.196487Z","level":"info","event":"    52.52      13.42 2026-06-29 15:00:00+00:00            25.7   0.0      2.85","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.196696Z","level":"info","event":"    52.52      13.42 2026-06-29 16:00:00+00:00            25.9   0.0      1.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.196899Z","level":"info","event":"    52.52      13.42 2026-06-29 17:00:00+00:00            25.1   0.0      0.55","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.197103Z","level":"info","event":"    52.52      13.42 2026-06-29 18:00:00+00:00            23.7   0.0      0.50","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.197318Z","level":"info","event":"    52.52      13.42 2026-06-29 19:00:00+00:00            21.6   0.1      0.30","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.197527Z","level":"info","event":"    52.52      13.42 2026-06-29 20:00:00+00:00            21.3   0.0      0.55","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.197738Z","level":"info","event":"    52.52      13.42 2026-06-29 21:00:00+00:00            20.9   0.0      0.80","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.197944Z","level":"info","event":"    52.52      13.42 2026-06-29 22:00:00+00:00            20.4  10.6      0.20","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.198153Z","level":"info","event":"    52.52      13.42 2026-06-29 23:00:00+00:00            20.5   1.1      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.198428Z","level":"info","event":"    52.52      13.42 2026-06-30 00:00:00+00:00            20.3   0.7      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.198662Z","level":"info","event":"    52.52      13.42 2026-06-30 01:00:00+00:00            19.9   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.198943Z","level":"info","event":"    52.52      13.42 2026-06-30 02:00:00+00:00            19.8   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.199137Z","level":"info","event":"    52.52      13.42 2026-06-30 03:00:00+00:00            19.6   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.199349Z","level":"info","event":"    52.52      13.42 2026-06-30 04:00:00+00:00            19.5   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.199574Z","level":"info","event":"    52.52      13.42 2026-06-30 05:00:00+00:00            19.6   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.199831Z","level":"info","event":"    52.52      13.42 2026-06-30 06:00:00+00:00            19.5   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.200037Z","level":"info","event":"    52.52      13.42 2026-06-30 07:00:00+00:00            19.4   0.0      0.10","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.200287Z","level":"info","event":"    52.52      13.42 2026-06-30 08:00:00+00:00            19.4   0.0      0.65","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.200514Z","level":"info","event":"    52.52      13.42 2026-06-30 09:00:00+00:00            19.9   0.0      1.55","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.200865Z","level":"info","event":"    52.52      13.42 2026-06-30 10:00:00+00:00            20.4   0.0      2.60","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.201230Z","level":"info","event":"    52.52      13.42 2026-06-30 11:00:00+00:00            21.4   0.0      3.30","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.201554Z","level":"info","event":"    52.52      13.42 2026-06-30 12:00:00+00:00            22.6   0.0      4.40","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.201810Z","level":"info","event":"    52.52      13.42 2026-06-30 13:00:00+00:00            24.2   0.0      5.30","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.202054Z","level":"info","event":"    52.52      13.42 2026-06-30 14:00:00+00:00            25.6   0.0      2.55","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.202332Z","level":"info","event":"    52.52      13.42 2026-06-30 15:00:00+00:00            26.9   0.0      4.80","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.202564Z","level":"info","event":"    52.52      13.42 2026-06-30 16:00:00+00:00            27.6   0.0      3.20","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.202771Z","level":"info","event":"    52.52      13.42 2026-06-30 17:00:00+00:00            27.8   0.0      0.70","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.202978Z","level":"info","event":"    52.52      13.42 2026-06-30 18:00:00+00:00            27.3   0.0      1.90","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.203246Z","level":"info","event":"    52.52      13.42 2026-06-30 19:00:00+00:00            26.9   0.0      1.25","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.203562Z","level":"info","event":"    52.52      13.42 2026-06-30 20:00:00+00:00            26.5   0.0      0.30","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.203791Z","level":"info","event":"    52.52      13.42 2026-06-30 21:00:00+00:00            25.9   0.0      0.30","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.203983Z","level":"info","event":"    52.52      13.42 2026-06-30 22:00:00+00:00            24.7   0.0      0.05","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.204225Z","level":"info","event":"    52.52      13.42 2026-06-30 23:00:00+00:00            23.5   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.204458Z","level":"info","event":"    52.52      13.42 2026-07-01 00:00:00+00:00            22.7   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.204670Z","level":"info","event":"    52.52      13.42 2026-07-01 01:00:00+00:00            22.2   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.204914Z","level":"info","event":"    52.52      13.42 2026-07-01 02:00:00+00:00            21.8   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.205135Z","level":"info","event":"    52.52      13.42 2026-07-01 03:00:00+00:00            21.1   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.205416Z","level":"info","event":"    52.52      13.42 2026-07-01 04:00:00+00:00            20.8   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.205630Z","level":"info","event":"    52.52      13.42 2026-07-01 05:00:00+00:00            20.7   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.205845Z","level":"info","event":"    52.52      13.42 2026-07-01 06:00:00+00:00            20.5   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.206051Z","level":"info","event":"    52.52      13.42 2026-07-01 07:00:00+00:00            20.3   0.0      0.05","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.206309Z","level":"info","event":"    52.52      13.42 2026-07-01 08:00:00+00:00            19.0   0.0      0.15","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.206543Z","level":"info","event":"    52.52      13.42 2026-07-01 09:00:00+00:00            19.3   0.0      0.70","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.206749Z","level":"info","event":"    52.52      13.42 2026-07-01 10:00:00+00:00            20.2   0.0      1.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.206946Z","level":"info","event":"    52.52      13.42 2026-07-01 11:00:00+00:00            20.9   0.0      1.85","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.207142Z","level":"info","event":"    52.52      13.42 2026-07-01 12:00:00+00:00            21.3   0.0      3.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.207404Z","level":"info","event":"    52.52      13.42 2026-07-01 13:00:00+00:00            21.6   0.0      2.80","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.207622Z","level":"info","event":"    52.52      13.42 2026-07-01 14:00:00+00:00            22.5   0.0      4.65","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.207831Z","level":"info","event":"    52.52      13.42 2026-07-01 15:00:00+00:00            23.2   0.0      5.10","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.208050Z","level":"info","event":"    52.52      13.42 2026-07-01 16:00:00+00:00            23.7   0.0      5.95","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.208267Z","level":"info","event":"    52.52      13.42 2026-07-01 17:00:00+00:00            24.0   0.0      4.05","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.208491Z","level":"info","event":"    52.52      13.42 2026-07-01 18:00:00+00:00            24.1   0.0      2.35","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.208719Z","level":"info","event":"    52.52      13.42 2026-07-01 19:00:00+00:00            23.8   0.0      1.20","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.208939Z","level":"info","event":"    52.52      13.42 2026-07-01 20:00:00+00:00            23.2   0.0      0.50","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.209153Z","level":"info","event":"    52.52      13.42 2026-07-01 21:00:00+00:00            22.5   0.0      0.25","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.209390Z","level":"info","event":"    52.52      13.42 2026-07-01 22:00:00+00:00            21.5   0.0      0.25","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.209599Z","level":"info","event":"    52.52      13.42 2026-07-01 23:00:00+00:00            20.5   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.209814Z","level":"info","event":"    52.52      13.42 2026-07-02 00:00:00+00:00            19.5   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.210004Z","level":"info","event":"    52.52      13.42 2026-07-02 01:00:00+00:00            18.7   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.210190Z","level":"info","event":"    52.52      13.42 2026-07-02 02:00:00+00:00            18.0   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.210381Z","level":"info","event":"    52.52      13.42 2026-07-02 03:00:00+00:00            17.5   0.0      0.00","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.210561Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.210738Z","level":"info","event":"============================================================","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.210921Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:16:51.185624Z","level":"info","event":"Done. Returned value was: None","task_id":"PRELOAD01","dag_id":"dag01","run_id":"manual__2026-06-28T14:12:20.580159+00:00","ti_id":"019f0e97-11f1-7257-8bbd-3186ae18cc4a","try_number":4,"map_index":-1,"logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":233}
+{"timestamp":"2026-06-28T14:16:51.185850Z","level":"info","event":"::group::Post Execute","task_id":"PRELOAD01","dag_id":"dag01","run_id":"manual__2026-06-28T14:12:20.580159+00:00","ti_id":"019f0e97-11f1-7257-8bbd-3186ae18cc4a","try_number":4,"map_index":-1,"logger":"task","filename":"task_runner.py","lineno":1288}
+{"timestamp":"2026-06-28T14:16:51.258015Z","level":"info","event":"::endgroup::","task_id":"PRELOAD01","dag_id":"dag01","run_id":"manual__2026-06-28T14:12:20.580159+00:00","ti_id":"019f0e97-11f1-7257-8bbd-3186ae18cc4a","try_number":4,"map_index":-1,"logger":"task","filename":"task_runner.py","lineno":1896}

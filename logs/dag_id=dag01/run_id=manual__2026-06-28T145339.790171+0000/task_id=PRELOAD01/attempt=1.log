@@ -1,0 +1,33 @@
+{"timestamp":"2026-06-28T14:53:44.143012Z","level":"info","event":"::group::Pre Execute","logger":"task","filename":"task_runner.py","lineno":1926}
+{"timestamp":"2026-06-28T14:53:44.200973Z","level":"info","event":"DAG bundles loaded: dags-folder","task_id":"PRELOAD01","run_id":"manual__2026-06-28T14:53:39.790171+00:00","ti_id":"019f0eb8-cc66-7e0c-80fb-18464a80a974","dag_id":"dag01","try_number":1,"map_index":-1,"logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-06-28T14:53:44.203070Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/dag01.py","task_id":"PRELOAD01","run_id":"manual__2026-06-28T14:53:39.790171+00:00","ti_id":"019f0eb8-cc66-7e0c-80fb-18464a80a974","dag_id":"dag01","try_number":1,"map_index":-1,"logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-06-28T14:53:44.901552Z","level":"info","event":"::endgroup::","task_id":"PRELOAD01","run_id":"manual__2026-06-28T14:53:39.790171+00:00","ti_id":"019f0eb8-cc66-7e0c-80fb-18464a80a974","dag_id":"dag01","try_number":1,"map_index":-1,"logger":"task","filename":"task_runner.py","lineno":1727}
+{"timestamp":"2026-06-28T14:53:44.966285Z","level":"info","event":"Database connection established successfully.","logger":"src.database.connection","task_id":"PRELOAD01","run_id":"manual__2026-06-28T14:53:39.790171+00:00","ti_id":"019f0eb8-cc66-7e0c-80fb-18464a80a974","dag_id":"dag01","try_number":1,"map_index":-1,"filename":"connection.py","lineno":35}
+{"timestamp":"2026-06-28T14:53:44.970431Z","level":"info","event":"Comparing 168 new rows against weather_forecasts for (lat=52.52000, lon=13.42000) from 2026-06-28 00:00:00+00:00 to 2026-07-04 23:00:00+00:00","logger":"src.etl.compare","task_id":"PRELOAD01","run_id":"manual__2026-06-28T14:53:39.790171+00:00","ti_id":"019f0eb8-cc66-7e0c-80fb-18464a80a974","dag_id":"dag01","try_number":1,"map_index":-1,"filename":"compare.py","lineno":240}
+{"timestamp":"2026-06-28T14:53:44.995358Z","level":"info","event":"No existing rows in DB for this window — all 168 rows are new.","logger":"src.etl.compare","task_id":"PRELOAD01","run_id":"manual__2026-06-28T14:53:39.790171+00:00","ti_id":"019f0eb8-cc66-7e0c-80fb-18464a80a974","dag_id":"dag01","try_number":1,"map_index":-1,"filename":"compare.py","lineno":255}
+{"timestamp":"2026-06-28T14:53:44.996328Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:53:44.996714Z","level":"info","event":"============================================================","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:53:44.997115Z","level":"info","event":"  WEATHER_FORECASTS — COMPARE REPORT","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:53:44.997478Z","level":"info","event":"============================================================","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:53:44.997829Z","level":"info","event":"  New batch rows   :    168","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:53:44.998218Z","level":"info","event":"  DB rows (window) :      0","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:53:44.998821Z","level":"info","event":"============================================================","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:53:44.999234Z","level":"info","event":"  🟢 New (to insert)  :    168","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:53:44.999650Z","level":"info","event":"  ✅ Existing (match) :      0","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:53:45.000053Z","level":"info","event":"  🟡 Changed (drift)  :      0","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:53:45.000437Z","level":"info","event":"  🔴 Stale (DB only)  :      0","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:53:45.000730Z","level":"info","event":"============================================================","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:53:45.001025Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:53:45.001321Z","level":"info","event":"── New rows (first 5) ──","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:53:45.006476Z","level":"info","event":" latitude  longitude             forecast_time  temperature_2m  rain  uv_index","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:53:45.006815Z","level":"info","event":"    52.52      13.42 2026-06-28 00:00:00+00:00            29.2   0.0       0.0","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:53:45.007367Z","level":"info","event":"    52.52      13.42 2026-06-28 01:00:00+00:00            29.9   0.0       0.0","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:53:45.007688Z","level":"info","event":"    52.52      13.42 2026-06-28 02:00:00+00:00            29.7   0.0       0.0","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:53:45.007989Z","level":"info","event":"    52.52      13.42 2026-06-28 03:00:00+00:00            29.4   0.0       0.0","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:53:45.008376Z","level":"info","event":"    52.52      13.42 2026-06-28 04:00:00+00:00            28.4   0.0       0.0","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:53:45.008657Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:53:45.008939Z","level":"info","event":"============================================================","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:53:45.009277Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-06-28T14:53:45.039887Z","level":"info","event":"Done. Returned value was: None","task_id":"PRELOAD01","run_id":"manual__2026-06-28T14:53:39.790171+00:00","ti_id":"019f0eb8-cc66-7e0c-80fb-18464a80a974","dag_id":"dag01","try_number":1,"map_index":-1,"logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":233}
+{"timestamp":"2026-06-28T14:53:45.040188Z","level":"info","event":"::group::Post Execute","task_id":"PRELOAD01","run_id":"manual__2026-06-28T14:53:39.790171+00:00","ti_id":"019f0eb8-cc66-7e0c-80fb-18464a80a974","dag_id":"dag01","try_number":1,"map_index":-1,"logger":"task","filename":"task_runner.py","lineno":1288}
+{"timestamp":"2026-06-28T14:53:45.085157Z","level":"info","event":"::endgroup::","task_id":"PRELOAD01","run_id":"manual__2026-06-28T14:53:39.790171+00:00","ti_id":"019f0eb8-cc66-7e0c-80fb-18464a80a974","dag_id":"dag01","try_number":1,"map_index":-1,"logger":"task","filename":"task_runner.py","lineno":1896}

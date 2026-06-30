@@ -1,0 +1,2 @@
+docker logs airflow_webserver
+for looking for airflow password
