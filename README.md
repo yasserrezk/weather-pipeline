@@ -34,7 +34,6 @@
 - [Database Schema](#-database-schema)
 - [Dashboard](#-dashboard)
 - [Useful Commands](#-useful-commands)
-- [Contributing](#-contributing)
 
 ---
 
