@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340">
+  <defs>
+    <!-- Sky gradient -->
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1437"/>
+      <stop offset="100%" stop-color="#1a3260"/>
+    </linearGradient>
+    <!-- Subtle horizontal glow band -->
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#1a4a8a" stop-opacity="0"/>
+      <stop offset="40%"  stop-color="#2563c4" stop-opacity="0.18"/>
+      <stop offset="60%"  stop-color="#2563c4" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#1a4a8a" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Grid fade -->
+    <linearGradient id="gridfade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#2563c4" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#2563c4" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Pill bg -->
+    <linearGradient id="pillbg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1d4ed8" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#0f4190" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="340" fill="url(#sky)"/>
+
+  <!-- Glow band -->
+  <rect x="0" y="80" width="1200" height="180" fill="url(#glow)"/>
+
+  <!-- Subtle grid lines -->
+  <g stroke="#2563c4" stroke-opacity="0.09" stroke-width="1">
+    <line x1="0" y1="85" x2="1200" y2="85"/>
+    <line x1="0" y1="130" x2="1200" y2="130"/>
+    <line x1="0" y1="175" x2="1200" y2="175"/>
+    <line x1="0" y1="220" x2="1200" y2="220"/>
+    <line x1="0" y1="265" x2="1200" y2="265"/>
+    <line x1="200" y1="0" x2="200" y2="340"/>
+    <line x1="400" y1="0" x2="400" y2="340"/>
+    <line x1="600" y1="0" x2="600" y2="340"/>
+    <line x1="800" y1="0" x2="800" y2="340"/>
+    <line x1="1000" y1="0" x2="1000" y2="340"/>
+  </g>
+
+  <!-- Stars -->
+  <g fill="white">
+    <circle cx="72"  cy="28"  r="1.2" opacity="0.6"/>
+    <circle cx="185" cy="44"  r="0.9" opacity="0.5"/>
+    <circle cx="310" cy="18"  r="1.4" opacity="0.55"/>
+    <circle cx="470" cy="32"  r="1.0" opacity="0.5"/>
+    <circle cx="560" cy="14"  r="1.2" opacity="0.45"/>
+    <circle cx="720" cy="40"  r="0.8" opacity="0.6"/>
+    <circle cx="880" cy="22"  r="1.3" opacity="0.5"/>
+    <circle cx="990" cy="48"  r="1.0" opacity="0.55"/>
+    <circle cx="1100" cy="16" r="1.1" opacity="0.5"/>
+    <circle cx="1160" cy="38" r="0.9" opacity="0.45"/>
+    <circle cx="130" cy="55"  r="0.8" opacity="0.4"/>
+    <circle cx="650" cy="58"  r="1.0" opacity="0.4"/>
+    <circle cx="950" cy="30"  r="0.7" opacity="0.5"/>
+  </g>
+
+  <!-- Pipeline flow graphic (left ornament) -->
+  <g opacity="0.55">
+    <!-- Nodes -->
+    <rect x="40" y="100" width="90" height="32" rx="6" fill="none" stroke="#4f8ef7" stroke-width="1.2"/>
+    <text x="85" y="120" text-anchor="middle" font-family="monospace" font-size="11" fill="#7fb3fa">EXT01</text>
+    <rect x="40" y="156" width="90" height="32" rx="6" fill="none" stroke="#4f8ef7" stroke-width="1.2"/>
+    <text x="85" y="176" text-anchor="middle" font-family="monospace" font-size="11" fill="#7fb3fa">TRA01</text>
+    <rect x="40" y="212" width="90" height="32" rx="6" fill="none" stroke="#4f8ef7" stroke-width="1.2"/>
+    <text x="85" y="232" text-anchor="middle" font-family="monospace" font-size="11" fill="#7fb3fa">PRE01</text>
+    <rect x="40" y="268" width="90" height="32" rx="6" fill="none" stroke="#4f8ef7" stroke-width="1.2"/>
+    <text x="85" y="288" text-anchor="middle" font-family="monospace" font-size="11" fill="#7fb3fa">LOAD01</text>
+    <!-- Connector lines -->
+    <line x1="85" y1="132" x2="85" y2="156" stroke="#4f8ef7" stroke-width="1" stroke-dasharray="3 2"/>
+    <line x1="85" y1="188" x2="85" y2="212" stroke="#4f8ef7" stroke-width="1" stroke-dasharray="3 2"/>
+    <line x1="85" y1="244" x2="85" y2="268" stroke="#4f8ef7" stroke-width="1" stroke-dasharray="3 2"/>
+  </g>
+
+  <!-- Right ornament: weather metrics -->
+  <g opacity="0.45" font-family="monospace" font-size="12" fill="#93c5fd">
+    <text x="1070" y="100">temp_2m</text>
+    <text x="1070" y="124">humidity</text>
+    <text x="1070" y="148">uv_index</text>
+    <text x="1070" y="172">wind_speed</text>
+    <text x="1070" y="196">rain</text>
+    <text x="1070" y="220">visibility</text>
+    <text x="1070" y="244">pressure</text>
+    <text x="1070" y="268">cloud_cover</text>
+    <!-- Simulated data bars -->
+    <rect x="1040" y="92"  width="28" height="6" rx="2" fill="#4f8ef7" opacity="0.6"/>
+    <rect x="1040" y="116" width="20" height="6" rx="2" fill="#4f8ef7" opacity="0.6"/>
+    <rect x="1040" y="140" width="14" height="6" rx="2" fill="#4f8ef7" opacity="0.6"/>
+    <rect x="1040" y="164" width="24" height="6" rx="2" fill="#4f8ef7" opacity="0.6"/>
+    <rect x="1040" y="188" width="10" height="6" rx="2" fill="#4f8ef7" opacity="0.6"/>
+    <rect x="1040" y="212" width="30" height="6" rx="2" fill="#4f8ef7" opacity="0.6"/>
+    <rect x="1040" y="236" width="18" height="6" rx="2" fill="#4f8ef7" opacity="0.6"/>
+    <rect x="1040" y="260" width="22" height="6" rx="2" fill="#4f8ef7" opacity="0.6"/>
+  </g>
+
+  <!-- Accent top line -->
+  <rect x="0" y="0" width="1200" height="3" fill="#2563c4" opacity="0.8"/>
+  <!-- Accent bottom line -->
+  <rect x="0" y="337" width="1200" height="3" fill="#2563c4" opacity="0.4"/>
+
+  <!-- Main title -->
+  <text x="600" y="155"
+    text-anchor="middle"
+    font-family="'Segoe UI', Arial, sans-serif"
+    font-weight="700"
+    font-size="58"
+    letter-spacing="-1"
+    fill="white"
+    opacity="0.97">
+    Weather Forecast Pipeline
+  </text>
+
+  <!-- Subtitle / tagline -->
+  <text x="600" y="198"
+    text-anchor="middle"
+    font-family="'Segoe UI', Arial, sans-serif"
+    font-weight="400"
+    font-size="20"
+    fill="#93c5fd"
+    letter-spacing="0.5">
+    Airflow · Open-Meteo · PostgreSQL · Docker · Dash
+  </text>
+
+  <!-- Tech pills -->
+  <g>
+    <!-- Apache Airflow pill -->
+    <rect x="310" y="230" width="136" height="30" rx="15" fill="url(#pillbg)" stroke="#3b82f6" stroke-width="0.8" stroke-opacity="0.7"/>
+    <text x="378" y="249" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="white" opacity="0.9">Apache Airflow 3.2</text>
+
+    <!-- ETL pill -->
+    <rect x="462" y="230" width="80" height="30" rx="15" fill="url(#pillbg)" stroke="#3b82f6" stroke-width="0.8" stroke-opacity="0.7"/>
+    <text x="502" y="249" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="white" opacity="0.9">ETL Pipeline</text>
+
+    <!-- Docker pill -->
+    <rect x="558" y="230" width="80" height="30" rx="15" fill="url(#pillbg)" stroke="#3b82f6" stroke-width="0.8" stroke-opacity="0.7"/>
+    <text x="598" y="249" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="white" opacity="0.9">Dockerized</text>
+
+    <!-- Python pill -->
+    <rect x="654" y="230" width="74" height="30" rx="15" fill="url(#pillbg)" stroke="#3b82f6" stroke-width="0.8" stroke-opacity="0.7"/>
+    <text x="691" y="249" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="white" opacity="0.9">Python 3</text>
+
+    <!-- Celery pill -->
+    <rect x="744" y="230" width="140" height="30" rx="15" fill="url(#pillbg)" stroke="#3b82f6" stroke-width="0.8" stroke-opacity="0.7"/>
+    <text x="814" y="249" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="white" opacity="0.9">CeleryExecutor</text>
+  </g>
+
+  <!-- Bottom author / repo hint -->
+  <text x="600" y="316"
+    text-anchor="middle"
+    font-family="'Segoe UI', Arial, sans-serif"
+    font-size="13"
+    fill="#4f8ef7"
+    opacity="0.65"
+    letter-spacing="1.5">
+    OPEN-METEO  ·  HOURLY FORECASTS  ·  POSTGRESQL  ·  DASH DASHBOARD
+  </text>
+</svg>
