@@ -39,8 +39,8 @@ def load_data() -> pd.DataFrame:
 
 # ── palette & layout helpers ──────────────────────────────────────────────────
 
-DARK_BG = "#0f1117"
-CARD_BG = "#1a1d27"
+DARK_BG = "#160f17"
+CARD_BG = "#2d133a"
 ACCENT = "#4f8ef7"
 ACCENT2 = "#f7934f"
 ACCENT3 = "#4ff7a8"
@@ -127,13 +127,13 @@ app.layout = html.Div(
                             "🌤 Weather Pipeline Dashboard",
                             style={
                                 "margin": 0,
-                                "fontSize": "24px",
+                                "fontSize": "30px",
                                 "fontWeight": "800",
                             },
                         ),
                         html.Span(
-                            "Weather Dashboard ETL Analytics",
-                            style={"fontSize": "13px", "color": MUTED},
+                            "    Weather Dashboard ETL Analytics",
+                            style={"fontSize": "16px", "color": MUTED},
                         ),
                     ]
                 ),
@@ -143,10 +143,10 @@ app.layout = html.Div(
                         html.Div(
                             id="cairo-clock",
                             style={
-                                "fontSize": "14px",
-                                "color": TEXT,
+                                "fontSize": "16px",
+                                "color": "#cbbad4",
                                 "fontWeight": "600",
-                                "background": "#1e2235",
+                                "background": "#160f17",
                                 "padding": "6px 16px",
                                 "borderRadius": "20px",
                                 "border": "1px solid #2a2d3e",
@@ -155,11 +155,12 @@ app.layout = html.Div(
                             },
                         ),
                         html.Span(
-                            "🟢 Live database connected",
+                            "Live database connected",
                             style={
-                                "fontSize": "13px",
-                                "color": ACCENT3,
-                                "background": "#0f2a1f",
+                                "fontSize": "16px",
+                                "color": "#cbbad4",
+                                "fontWeight": "600",
+                                "background": "#160f17",
                                 "padding": "6px 14px",
                                 "borderRadius": "20px",
                             },
@@ -202,10 +203,10 @@ app.layout = html.Div(
                                     id="loc-select",
                                     options=LOCATIONS,
                                     value=LOCATIONS[0]["value"],
-                                    clearable=False,
+                                    clearable=True,
                                     style={
                                         "background": CARD_BG,
-                                        "color": "#f7934f",
+                                        "color": "#2d133a",
                                         "border": "1px solid #2a2d3e",
                                         "minWidth": "220px",
                                     },
@@ -233,8 +234,8 @@ app.layout = html.Div(
                                     value=168,
                                     clearable=False,
                                     style={
-                                        "background": CARD_BG,
-                                        "color": TEXT,
+                                        "backgroundColor": "#2d133a", # or "#FF00FF"
+                                        "color": "#2d133a",             # Changed for better contrast
                                         "border": "1px solid #2a2d3e",
                                         "minWidth": "160px",
                                     },
