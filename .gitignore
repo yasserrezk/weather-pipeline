@@ -1,7 +1,13 @@
 
+.env
+
+
+logs/
+*.log
+
 __pycache__/
 *.pyc
 *.url
-./
-.env
-.bat
+
+
+

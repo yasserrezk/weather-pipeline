@@ -227,8 +227,8 @@ app.layout = html.Div(
                                 dcc.Dropdown(
                                     id="window-select",
                                     options=[
-                                        {"label": "Last 24 h", "value": 24},
-                                        {"label": "Last 48 h", "value": 48},
+                                        {"label": "Last 24 h", "value": 144},
+                                        {"label": "Last 48 h", "value": 120},
                                         {"label": "Last 7 days", "value": 168},
                                     ],
                                     value=168,
